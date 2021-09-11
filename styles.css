@@ -6,13 +6,18 @@
   font-family: "Poppins", sans-serif;
   /* --overlay-color: #03a9f4; */
 }
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+.head {
+  width: 50%;
+  padding: 4em 4em 0 4em;
+}
+
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,34 +27,49 @@ header .logo {
   background-color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+  max-width: 10em;
 }
-.toggle {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
+
+#login {
+  background-color: #fff;
 }
-.toggle.active {
-  background: url(https://i.ibb.co/rt3HybH/close.png);
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
-  cursor: pointer;
+
+#login:hover {
+  color: #fc8019;
 }
-.showcase {
-  position: absolute;
-  right: 0;
-  width: 100%;
-  min-height: 100vh;
-  padding: 100px;
+
+#signup {
+  color: #fff;
+}
+
+.register {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
+}
+
+.space-right {
+  margin: 0.5em;
+  padding: 0.5em 0.5em;
+  background-color: #111;
+}
+
+.space-right > a {
+  padding: 0.5em;
+}
+
+.space-right.click2 {
+  background-color: #fff;
+}
+
+.img1 {
+  background-image: url("https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_1340/Dinner1-new_s93yyf");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 50%;
+}
+
+.showcase {
+  display: flex;
   transition: 0.5s;
   z-index: 2;
 }
@@ -58,16 +78,10 @@ header .logo {
 }
 
 .image {
-  position: absolute;
-  left: calc(50% + 80px);
-  right: 0;
-  background-repeat: no-repeat;
-  height: 100%;
-  background-size: cover;
-  background-position: 100%;
-  top: 0;
-  background-color: hsla(26, 5%, 70%, 0.2);
+  width: 50%;
+  object-fit: cover;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -77,52 +91,238 @@ header .logo {
   background: var(--overlay-color);
   mix-blend-mode: overlay;
 }
+
 .text {
   position: relative;
-  z-index: 10;
+  padding: 2em 1em;
 }
 
+.text h1 {
+  font-size: 2em;
+  padding: 1em 0;
+  font-weight: 500;
+  line-height: 1em;
+  text-transform: uppercase;
+}
 
 .text h2 {
-  font-size: 5em;
+  font-size: 6em;
   font-weight: 800;
-  color: #fff;
   line-height: 1em;
+  padding: 2em 0;
   text-transform: uppercase;
 }
 .text h3 {
-  font-size: 1em;
-  font-weight: 700;
-  color: #fff;
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 0.9em 0;
   line-height: 1em;
   text-transform: uppercase;
 }
+
+.text h5 {
+  font-weight: 400;
+  font-size: 15px;
+  color: #a9abb2;
+  margin: 30px 0 10px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+}
+
 .text p {
   font-size: 1.1em;
-  color: #fff;
+  padding: 1em 0;
   margin: 20px 0;
   font-weight: 400;
   max-width: 700px;
 }
-.text a {
+.click4 a {
   display: inline-block;
-  font-size: 1em;
-  background: #fff;
-  padding: 10px 30px;
-  text-transform: uppercase;
+  font-size: 0.6em;
+  padding: 1em 1em 1em 0;
   text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
   color: #111;
   letter-spacing: 2px;
   transition: 0.2s;
 }
-.text a:hover {
-  letter-spacing: 6px;
+
+.dj1 {
+  display: flex;
+  width: 100%;
 }
+
+.dj1 input {
+  width: 80%;
+  padding: 0.9em;
+}
+
+.dj1 input:active {
+  border-color: #fc8019;
+}
+
+.dj1 .click1 {
+  width: 20%;
+  background-color: #fc8019;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dj1 a {
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 700;
+}
+
+.sectionfeatures {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2b1e16;
+
+  padding: 0.5em 10em 5em 10em;
+  text-align: center;
+  color: #fff;
+}
+
+.sectionfeatures .features {
+  max-width: 10em;
+}
+
+.sectionfeatures .whitebold {
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+}
+
+.sectionfeatures p {
+  padding-top: 0.5em;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: #e0cbc1;
+}
+
+.brown {
+  max-width: 7em;
+}
+
+.appsection {
+  display: flex;
+}
+
+.textapp {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 5em;
+}
+
+.imgbutton {
+  display: flex;
+}
+
+.textcontent > h2 {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+.textcontent > h3 {
+  font-weight: 300;
+  color: #7e808c;
+  line-height: 1.2;
+  margin-bottom: 2em;
+}
+
+.storebutton {
+  margin: 2em 2em 2em 0;
+  width: 12em;
+  cursor: pointer;
+}
+
+.phoness {
+  width: 50%;
+}
+
+.phoness1 {
+  max-width: 80%;
+}
+
+.footer1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 10em;
+  background-color: #111;
+  color: #fff;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col .footerlistheading {
+  font-size: 0.7em;
+  margin-bottom: 1em;
+  color: gray;
+}
+
+.col .footerlist {
+  list-style: none;
+}
+
+.col .footerlist .footerlistitems a {
+  color: #fff;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+.col .footerlist .footerlistitems a:hover {
+  font-weight: 600;
+}
+
+.footerbutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.footerbutton .s2 {
+  position: relative;
+  margin: 0 1em 2em 1em;
+}
+
+.footerbutton .s2:hover {
+  width: 13em;
+  transition: 1s ease-in-out;
+}
+
+.imgbutton {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  padding: 2em 10em 1em 10em;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo2 .bottomlogo {
+  max-width: 10em;
+}
+
+.copyright {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
 .social {
-  position: absolute;
-  z-index: 10;
   bottom: 20px;
   display: flex;
   justify-content: center;
